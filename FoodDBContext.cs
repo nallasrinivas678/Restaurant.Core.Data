@@ -8,6 +8,11 @@ namespace Restaurant.Core.Data
 {
     public class FoodDBContext: DbContext
     {
+        //to pass options to base class - FoodDBContext
+        public FoodDBContext(DbContextOptions<FoodDBContext> options):base(options)
+        {
+
+        }    
         public DbSet<Service.Restaurant> Restaurants { get; set; } 
     }
 }
